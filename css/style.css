@@ -227,11 +227,10 @@ padding: 12px 10px;
   #social{
     background:#202f55;
     z-index: 1;
-    border-radius: 5px;
+    border-radius: 2px;
     opacity: 0.9;
-    padding: 0 5px;
-    right: 5%;
-    bottom:7%;
+    padding: 0 3px;
+    bottom:2%;
   }
   #language {
     font-size: 0.79em;
