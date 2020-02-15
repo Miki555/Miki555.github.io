@@ -18,65 +18,38 @@ body{
   background-color: #202f55;
 }
 header{
-  padding-top: 50px;
   display:flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 #logo{
-  width:calc(190 / 960*100%);
+  width:calc(290 / 960*100%);
   display: block;
   margin-left: calc(18 / 960*100%);
+  padding-top: 10px;
 }
 #logo img{
   width:100%;
 }
-
-
-
-/*言語切り替え*/
-#language {
-    margin:0 auto;
-    display: flex;
-    margin-left: calc(50 / 960*100%);
-    font-size: 0.89em;
-}
-#language input[type="radio"]{
-  display: none;
-}
-#language .bar{
-  background-color: #f6f6f6;
-  width: 1px;
-  height: auto;
-  opacity: 0.5;
-  margin: 0 10px;
-}
-/* === 各ラジオボタンのラベルをボタンに変更 ==*/
-#language label{
-  display:block;
-  cursor: pointer;
-}
-
 @media screen and (max-width:768px){
-
-  header{
-    padding-top: calc(80 / 768*100%);
-    display:block;
-    align-items: unset;
+  h1{
+    margin: 0 auto calc(60 / 768*100%);
   }
   #logo{
     width:calc(500 / 768*100%);
     display: block;
     margin-left: 0;
-    margin: 0 auto calc(50 / 768*100%);
+    margin: 0 auto;
   }
-  #language {
-    display: flex;
-    margin-left:0;
-    font-size: 0.89em;
-    justify-content: center;
-    margin: 0 auto calc(40 / 768*100%);
 }
+@media screen and (max-width:768px){
+
+  header{
+    padding: calc(80 / 768*100%) 0 0;
+    display:block;
+    align-items: unset;
+  }
 }
 
 main{
@@ -87,7 +60,7 @@ main{
 
 @media screen and (max-width:768px){
   main{
-    width: calc(650 / 768*100%);
+    width: calc(690 / 768*100%);
   }
 }
 /*h2 h3*/
@@ -161,13 +134,14 @@ section{
   }
 }
 
-/*profile*/
+/******************* profile */
 #profile{
   position: absolute;
   display:flex;
   bottom: 5%;
   left: 2%;
   width: 95%;
+  margin-bottom: 0;
 }
 #profile div {
   display: flex;
@@ -189,25 +163,85 @@ section{
     position: unset;
     bottom: 0;
     left: 0;
-    justify-content: space-between;
+    margin-bottom: calc(200 / 768*100%);
+    width: 100%;
   }
   #profile div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: unset;
   }
   #profile div p{
-    width:270px;
-  }
-  #profile div p{
+    width:100%;
     font-size:0.8em;
     line-height: 1.5;
   }
 }
+/**************** social */
+#social{
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  margin-bottom: 0;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#social ul li{
+  display: block;
+  margin-bottom: 10px;
+}
+#social ul li a{
+  padding: 15px 10px;
+}
+#social ul li .fab{
+  font-size: 2em;
+  color: #f6f6f6;
+  opacity: 0.7;
+}
+/*言語切り替え*/
+#language {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.89em;
+  margin-bottom: 20px;
+}
+#language input[type="radio"]{
+display: none;
+}
+#language .bar{
+background-color: #f6f6f6;
+width: 100%;
+height: 1px;
+opacity: 0.5;
+margin: 0 10px;
+}
+#language label{
+display:block;
+cursor: pointer;
+padding: 12px 10px;
+}
+@media screen and (max-width:768px){
+  #social{
+    background:#202f55;
+    z-index: 1;
+    border-radius: 5px;
+    opacity: 0.9;
+    padding: 0 5px;
+    right: 5%;
+    bottom:7%;
+  }
+  #language {
+    font-size: 0.79em;
+    margin-bottom: 5px;
+  }
+}
 
-/*web*/
+/**************** web */
 #works{
-  margin-top: calc(100 / 960 * 100%);
+  margin-top: calc(50 / 960 * 100%);
   display: flex;
 }
 .gallery ul {
@@ -315,7 +349,6 @@ section{
 /* modal */
 
 .modalContain{
-  margin: calc(120 / 960*100%) auto;
   color: #202f55;
 }
 .modalContain dl{
@@ -387,7 +420,7 @@ section{
 }
 @media screen and (max-width:768px){
   .modalContain{
-    margin: calc(150 / 768*100%) auto;
+    margin: calc(50 / 768*100%) auto;
   }
   .modalContain dt {
     margin:0 auto;
@@ -444,7 +477,7 @@ section{
 /*footer*/
 footer {
   margin-top:calc(70 / 960*100%);
-  margin-bottom: calc(50 / 960*100%);
+  margin-bottom: calc(20 / 960*100%);
   padding-bottom: 0;
 }
 .copyright{
@@ -454,4 +487,14 @@ footer {
   font-size: 0.7em;
   letter-spacing: 1px;
   display: block;
+}
+@media screen and (max-width:768px){
+  footer {
+    margin-top:calc(120 / 768*100%);
+    margin-bottom: calc(60 / 768*100%);
+    padding-bottom: 0;
+  }
+  .copyright small{
+    font-size: 0.6em;
+  }
 }
