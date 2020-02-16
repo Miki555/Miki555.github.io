@@ -10,7 +10,7 @@ $(function(){
       }
     },{offset : '75%'});
 
-  //言語切り替え
+  //Language
   var en=$('.en'),
       ja=$('.ja'),
       btn_ja=$('.lang_ja'),
@@ -31,7 +31,8 @@ $(function(){
     btn_en.css('color','#f6f6f6');
     btn_ja.css('color','#c5b482');
   });
-
+　
+  // smoothscroll
   $(function(){
     $('a[href^="#"]').click(function(){
       var speed = 500;
@@ -43,6 +44,7 @@ $(function(){
     });
   });
 
+  // Random gallery
     var arr = [];
     $('.galleryContent li').each(function() {
       arr.push($(this).html());
