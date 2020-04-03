@@ -350,6 +350,11 @@ padding: 12px 10px;
   grid-row: 6;
   transition-delay: 1.8s;
 }
+.gallery ul li:nth-of-type(11){
+  grid-column: 1/ 7;
+  grid-row: 7;
+  transition-delay: 1.8s;
+}
 .gallery ul li a{
   display:flex;
   position: relative;
