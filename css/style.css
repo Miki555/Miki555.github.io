@@ -448,6 +448,9 @@ padding: 12px 10px;
   margin-left: auto;
   margin-right: auto;
 }
+.modalContain dd.wide p {
+  width: calc(600 / 960*100%);
+}
 .modalContain dd p img{
   width: 100%;
 }
