@@ -44,17 +44,17 @@ $(function(){
     });
   });
 
-  // Random gallery
+  // Random works
     var arr = [];
-    $('.galleryContent li').each(function() {
+    $('.worksContent li').each(function() {
       arr.push($(this).html());
     });
     arr.sort(function() {
       return Math.random() - Math.random();
     });
-    $('.galleryContent').empty();
+    $('.worksContent').empty();
     for(i=0; i < arr.length; i++) {
-      $('.galleryContent').append('<li>' + arr[i] + '</li>');
+      $('.worksContent').append('<li>' + arr[i] + '</li>');
     }
 
 
