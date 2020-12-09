@@ -21,13 +21,16 @@ header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 #logo {
   width: calc(77 / 960 * 100%);
   display: block;
   margin-left: calc(18 / 960 * 100%);
-  padding-top: 10px;
+  padding-top: 30px;
 }
 #logo.event {
   opacity: 0;
@@ -63,6 +66,7 @@ header {
 main {
   margin: 0 auto;
   width: calc(960 / 1366 * 100%);
+  max-width: 1366px;
   overflow: hidden;
 }
 
@@ -248,6 +252,10 @@ section {
   font-size: 1.5em;
   color: #f6f6f6;
   opacity: 0.7;
+  transition: 0.4s ease-in;
+}
+#social ul li .fab:hover {
+  opacity: 1;
 }
 /*言語切り替え*/
 #language {
@@ -448,7 +456,7 @@ section {
 .modalContain dt a {
   color: #c5b482;
   font-size: 0.8em;
-  transition: 0.5s ease-in;
+  transition: 0.4s ease-in;
 }
 .modalContain dt a:hover {
   opacity: 0.7;
