@@ -24,6 +24,8 @@ header {
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
+  position: fixed;
+  z-index: 2;
 }
 
 #logo {
@@ -60,6 +62,7 @@ header {
     padding: calc(80 / 768 * 100%) 0 0;
     display: block;
     align-items: unset;
+    position: relative;
   }
 }
 
@@ -169,6 +172,7 @@ section {
   bottom: 5%;
   left: 2%;
   width: 95%;
+  max-width: 200px;
   margin-bottom: 0;
   opacity: 0;
   transform: translateX(50px);
@@ -210,6 +214,7 @@ section {
     transition: 1s;
     transition-delay: unset;
     justify-content: space-between;
+    max-width: none;
   }
   #profile h2 {
     margin: 0 auto 0 5px;
@@ -221,7 +226,7 @@ section {
     margin-right: auto;
   }
   #profile div .profileImg {
-    max-width: 330px;
+    max-width: 220px;
   }
   #profile div p {
     width: 100%;
