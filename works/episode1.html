@@ -28,35 +28,10 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/jquery.waypoints.min.js" type="text/javascript"></script>
     <script src="../js/main.js"></script>
-
-    <!--objedt-fit（IE対策）-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
-    <script>objectFitImages();</script>
-    <!--↓PC＆iPadとスマホでviewport設定-->
-    <script type="text/javascript">
-    if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
-          document.write('<meta name="viewport" content="width=device-width,user-scalable=yes,maximum-scale=2">');
-        }else{
-            document.write('<meta name="viewport" content="width=910,user-scalable=yes,maximum-scale=2">');
-      }
-    </script>
+    <script src="../js/analytics.js"></script>
 </head>
 <body>
-  <header >
-    <div id="logo">
-        <a href="../index.html"><img src="../img/logo01.png" alt="Lai Shiji"></a>
-    </div>
-    <nav>
-      <ul>
-        <li class="ja"><a href="../index.html#works">works</a></li>
-        <li class="en"><a href="../index.html#works">works</a></li>
-        <li class="ja"><a href="../index.html#profile">profile</a></li>
-        <li class="en"><a href="../index.html#profile">profile</a></li>
-        <li class="ja"><a href="../index.html#contact">contact</a></li>
-        <li class="en"><a href="../index.html#contact">contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <script>writeHeader("../");</script>
 <main>
   <section id="social" class="event">
     <div id="language">
@@ -82,7 +57,7 @@
         </ul>
   </section>
   <div class="event">
-      <div class="modalContain">
+      <div class="worksContain">
         <dl>
           <dt>
             <h1 class="ja">アサヒ飲料　十六茶</h1>
@@ -105,13 +80,8 @@
         </dl>
       </div>
   </div>
+  <script>writeSectionCommon("../");</script>
 </main>         
-<footer>
-  <div class="copyright">
-    <small>
-      Copyright 2019 - 2021 &copy;Lai Shiji
-    </small>
-  </div>
-</footer>
+<script>writeFooter("../");</script>
 </body>
 </html>

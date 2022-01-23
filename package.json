@@ -1,0 +1,23 @@
+{
+  "name": "miki555.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass scss/ --output css/ --output-style compressed --watch --source-map true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miki555/Miki555.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Miki555/Miki555.github.io/issues"
+  },
+  "homepage": "https://github.com/Miki555/Miki555.github.io#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

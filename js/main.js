@@ -57,12 +57,55 @@ $(function(){
       $('.worksContent').append('<li>' + arr[i] + '</li>');
     }
 
-
+  // smooth scroll  
+    $(function(){
+      $('a[href^="#"]').click(function(){
+        var adjust = 0;
+        var speed = 600;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top + adjust;
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+    });
 });
 
+function writeHeader(rootDir){
+  $.ajax({
+      url: rootDir + "include/header.html",
+      cache: false,
+      async: false,
+      success: function(html){
+          html = html.replace(/\{\$root\}/g, rootDir);
+          document.write(html);
+      }
+  });
+}
 
+function writeFooter(rootDir){
+  $.ajax({
+      url: rootDir + "include/footer.html",
+      cache: false,
+      async: false,
+      success: function(html){
+          html = html.replace(/\{\$root\}/g, rootDir);
+          document.write(html);
+      }
+  });
+}
 
-
+function writeSectionCommon(rootDir){
+  $.ajax({
+      url: rootDir + "include/sections.html",
+      cache: false,
+      async: false,
+      success: function(html){
+          html = html.replace(/\{\$root\}/g, rootDir);
+          document.write(html);
+      }
+  });
+}
 
 
 
